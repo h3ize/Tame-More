@@ -12,8 +12,6 @@ public class ModAttachments {
 
     public static final Supplier<AttachmentType<TameData>> TAME_DATA = ATTACHMENTS.register("tame_data",
             () -> AttachmentType.builder(() -> TameData.EMPTY)
-                    // If your NeoForge version wants a Codec instead of a MapCodec here,
-                    // use TameData.MAP_CODEC.codec()
-                    .serialize(TameData.MAP_CODEC)
+                    .serialize(TameData.MAP_CODEC.codec())
                     .build());
 }
