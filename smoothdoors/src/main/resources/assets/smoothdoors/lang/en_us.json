@@ -1,0 +1,7 @@
+{
+  "smoothdoors.configuration.title": "Smooth Doors",
+  "smoothdoors.configuration.enabled": "Enable smooth doors",
+  "smoothdoors.configuration.enabled.tooltip": "Turns the door swing animation on or off.",
+  "smoothdoors.configuration.durationTicks": "Swing duration (ticks)",
+  "smoothdoors.configuration.durationTicks.tooltip": "How long a full door swing takes. 20 ticks is one second."
+}
