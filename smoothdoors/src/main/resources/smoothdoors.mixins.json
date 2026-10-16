@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.smoothdoors.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "DoorBlockMixin"
+  ],
+  "client": [
+    "ClientLevelMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

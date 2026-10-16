@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT"
+
+[[mods]]
+modId="smoothdoors"
+version="1.0.0"
+displayName="Smooth Doors"
+description='''Doors swing open and closed with a smooth animation instead of snapping. Doors opened from the side they would swing toward move to that edge and swing away from you. Install on both client and server. Works with Double Doors when it is installed.'''
+
+[[mixins]]
+config="smoothdoors.mixins.json"
+
+[[dependencies.smoothdoors]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.smoothdoors]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.smoothdoors]]
+modId="doubledoors"
+type="optional"
+versionRange="[1,)"
+ordering="AFTER"
+side="BOTH"
