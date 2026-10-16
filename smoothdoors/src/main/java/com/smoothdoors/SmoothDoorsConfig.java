@@ -11,12 +11,12 @@ public final class SmoothDoorsConfig {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 
         ENABLED = builder
-                .comment("Turns the door swing animation on or off.")
+                .comment("Turns the door, trapdoor and fence gate animations on or off.")
                 .translation("smoothdoors.configuration.enabled")
                 .define("enabled", true);
 
         DURATION_TICKS = builder
-                .comment("How long a full door swing takes, in ticks. 20 ticks is one second.")
+                .comment("How long a full swing takes, in ticks. 20 ticks is one second.")
                 .translation("smoothdoors.configuration.durationTicks")
                 .defineInRange("durationTicks", 6, 1, 40);
 
