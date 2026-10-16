@@ -2,7 +2,6 @@ package com.example.tamemore;
 
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
@@ -13,6 +12,8 @@ import net.minecraft.world.entity.animal.Ocelot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import java.util.Optional;
 
@@ -40,6 +41,9 @@ public final class PetHelper {
 
     public static void setSitting(Mob mob, boolean sitting) {
         mob.setData(ModAttachments.TAME_DATA, data(mob).withSitting(sitting));
+        if (!mob.level().isClientSide()) {
+            PacketDistributor.sendToPlayersTrackingEntity(mob, new SitSyncPayload(mob.getId(), sitting));
+        }
     }
 
     /** Returns the owner if they are online and in the same dimension, otherwise null. */
@@ -73,7 +77,6 @@ public final class PetHelper {
             // Fires the vanilla tame_animal trigger -> our advancements listen for it
             CriteriaTriggers.TAME_ANIMAL.trigger(sp, animal);
         }
-        player.displayClientMessage(Component.translatable("message.tamemore.tamed", mob.getName()), true);
     }
 
     public static void particles(Mob mob, boolean success) {

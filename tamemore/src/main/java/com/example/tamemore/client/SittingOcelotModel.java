@@ -45,19 +45,19 @@ public class SittingOcelotModel extends OcelotModel<Ocelot> {
         head.z += -1.0F;
 
         // Front legs straight down
-        frontLegL.xRot = -0.15707964F;
-        frontLegL.y += -3.0F;
-        frontLegL.z += 1.0F;
-        frontLegR.xRot = -0.15707964F;
-        frontLegR.y += -3.0F;
-        frontLegR.z += 1.0F;
+        leftFrontLeg.xRot = -0.15707964F;
+        leftFrontLeg.y += -3.0F;
+        leftFrontLeg.z += 1.0F;
+        rightFrontLeg.xRot = -0.15707964F;
+        rightFrontLeg.y += -3.0F;
+        rightFrontLeg.z += 1.0F;
 
         // Back legs folded forward under the body
-        backLegL.xRot = -1.5707964F;
-        backLegL.y += 3.0F;
-        backLegL.z += -4.0F;
-        backLegR.xRot = -1.5707964F;
-        backLegR.y += 3.0F;
-        backLegR.z += -4.0F;
+        leftHindLeg.xRot = -1.5707964F;
+        leftHindLeg.y += 3.0F;
+        leftHindLeg.z += -4.0F;
+        rightHindLeg.xRot = -1.5707964F;
+        rightHindLeg.y += 3.0F;
+        rightHindLeg.z += -4.0F;
     }
 }

@@ -3,7 +3,6 @@ package com.example.tamemore;
 import com.example.tamemore.goal.FollowOwnerPetGoal;
 import com.example.tamemore.goal.PetSitGoal;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Mob;
@@ -19,7 +18,10 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.network.PacketDistributor;
+import net.minecraft.server.level.ServerPlayer;
 
 @EventBusSubscriber(modid = TameMore.MODID)
 public class TamingEvents {
@@ -88,8 +90,6 @@ public class TamingEvents {
             mob.getNavigation().stop();
             mob.setJumping(false);
             if (sit) mob.setTarget(null);
-            player.displayClientMessage(Component.translatable(
-                    sit ? "message.tamemore.sitting" : "message.tamemore.following", mob.getName()), true);
             consume(event);
         }
     }
@@ -100,6 +100,15 @@ public class TamingEvents {
         if (event.getEntity() instanceof Mob mob && PetHelper.isSupported(mob)
                 && !mob.level().isClientSide() && PetHelper.isSitting(mob)) {
             PetHelper.setSitting(mob, false);
+        }
+    }
+
+    /** A player who starts tracking a sitting pet needs to be told it is sitting. */
+    @SubscribeEvent
+    public static void onStartTracking(PlayerEvent.StartTracking event) {
+        if (event.getTarget() instanceof Mob mob && PetHelper.isSupported(mob)
+                && event.getEntity() instanceof ServerPlayer sp && PetHelper.isSitting(mob)) {
+            PacketDistributor.sendToPlayer(sp, new SitSyncPayload(mob.getId(), true));
         }
     }
 
