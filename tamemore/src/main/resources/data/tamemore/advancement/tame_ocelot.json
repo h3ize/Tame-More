@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:husbandry/tame_an_animal",
+  "display": {
+    "icon": { "id": "minecraft:cod" },
+    "title": { "translate": "advancement.tamemore.tame_ocelot.title" },
+    "description": { "translate": "advancement.tamemore.tame_ocelot.description" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tamed_ocelot": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": { "type": "minecraft:ocelot" }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["tamed_ocelot"]]
+}

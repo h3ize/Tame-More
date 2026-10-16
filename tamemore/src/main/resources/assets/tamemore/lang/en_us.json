@@ -1,0 +1,9 @@
+{
+  "advancement.tamemore.tame_ocelot.title": "Jungle Buddy",
+  "advancement.tamemore.tame_ocelot.description": "Tame an ocelot with raw fish",
+  "advancement.tamemore.tame_fox.title": "Foxy Friend",
+  "advancement.tamemore.tame_fox.description": "Win over a fox with raw chicken or rabbit",
+  "message.tamemore.tamed": "You tamed %s!",
+  "message.tamemore.sitting": "%s is sitting",
+  "message.tamemore.following": "%s is following you"
+}

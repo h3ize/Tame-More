@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:husbandry/tame_an_animal",
+  "display": {
+    "icon": { "id": "minecraft:sweet_berries" },
+    "title": { "translate": "advancement.tamemore.tame_fox.title" },
+    "description": { "translate": "advancement.tamemore.tame_fox.description" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tamed_fox": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": { "type": "minecraft:fox" }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["tamed_fox"]]
+}
