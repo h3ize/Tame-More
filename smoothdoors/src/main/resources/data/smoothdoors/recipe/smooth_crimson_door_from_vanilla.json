@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "minecraft:crimson_door"
+    }
+  ],
+  "result": {
+    "id": "smoothdoors:smooth_crimson_door",
+    "count": 1
+  }
+}

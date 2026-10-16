@@ -1,7 +1,14 @@
 {
-  "smoothdoors.configuration.title": "Smooth Doors",
-  "smoothdoors.configuration.enabled": "Enable smooth animations",
-  "smoothdoors.configuration.enabled.tooltip": "Turns the door, trapdoor and fence gate animations on or off.",
-  "smoothdoors.configuration.durationTicks": "Swing duration (ticks)",
-  "smoothdoors.configuration.durationTicks.tooltip": "How long a full swing takes. 20 ticks is one second."
+  "block.smoothdoors.smooth_oak_door": "Smooth Oak Door",
+  "block.smoothdoors.smooth_spruce_door": "Smooth Spruce Door",
+  "block.smoothdoors.smooth_birch_door": "Smooth Birch Door",
+  "block.smoothdoors.smooth_jungle_door": "Smooth Jungle Door",
+  "block.smoothdoors.smooth_acacia_door": "Smooth Acacia Door",
+  "block.smoothdoors.smooth_dark_oak_door": "Smooth Dark Oak Door",
+  "block.smoothdoors.smooth_mangrove_door": "Smooth Mangrove Door",
+  "block.smoothdoors.smooth_cherry_door": "Smooth Cherry Door",
+  "block.smoothdoors.smooth_bamboo_door": "Smooth Bamboo Door",
+  "block.smoothdoors.smooth_crimson_door": "Smooth Crimson Door",
+  "block.smoothdoors.smooth_warped_door": "Smooth Warped Door",
+  "block.smoothdoors.smooth_iron_door": "Smooth Iron Door"
 }

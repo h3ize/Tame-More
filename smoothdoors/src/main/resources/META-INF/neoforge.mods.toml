@@ -1,15 +1,15 @@
 modLoader="javafml"
-loaderVersion="[1,)"
+loaderVersion="[4,)"
 license="MIT"
 
 [[mods]]
 modId="smoothdoors"
 version="1.0.0"
 displayName="Smooth Doors"
-description='''Doors, trapdoors and fence gates swing open and closed with a smooth animation instead of snapping. Client side only.'''
-
-[[mixins]]
-config="smoothdoors.mixins.json"
+authors="You"
+description='''
+Adds smoothly animated versions of every vanilla door.
+'''
 
 [[dependencies.smoothdoors]]
 modId="neoforge"
@@ -21,13 +21,6 @@ side="BOTH"
 [[dependencies.smoothdoors]]
 modId="minecraft"
 type="required"
-versionRange="[1.21.1,1.22)"
+versionRange="[1.21.1]"
 ordering="NONE"
-side="BOTH"
-
-[[dependencies.smoothdoors]]
-modId="doubledoors"
-type="optional"
-versionRange="[1,)"
-ordering="AFTER"
 side="BOTH"

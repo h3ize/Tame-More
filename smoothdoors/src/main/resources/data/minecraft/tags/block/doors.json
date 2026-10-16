@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "smoothdoors:smooth_oak_door",
+    "smoothdoors:smooth_spruce_door",
+    "smoothdoors:smooth_birch_door",
+    "smoothdoors:smooth_jungle_door",
+    "smoothdoors:smooth_acacia_door",
+    "smoothdoors:smooth_dark_oak_door",
+    "smoothdoors:smooth_mangrove_door",
+    "smoothdoors:smooth_cherry_door",
+    "smoothdoors:smooth_bamboo_door",
+    "smoothdoors:smooth_crimson_door",
+    "smoothdoors:smooth_warped_door",
+    "smoothdoors:smooth_iron_door"
+  ]
+}

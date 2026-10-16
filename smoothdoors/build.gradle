@@ -4,11 +4,9 @@ plugins {
 }
 
 version = mod_version
-group = mod_group_id
+group = 'com.example.smoothdoors'
 
-base {
-    archivesName = mod_id
-}
+base { archivesName = mod_id }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
@@ -18,6 +16,10 @@ neoForge {
     runs {
         client {
             client()
+        }
+        server {
+            server()
+            programArgument '--nogui'
         }
     }
 
