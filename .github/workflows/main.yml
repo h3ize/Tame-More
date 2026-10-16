@@ -25,10 +25,11 @@ jobs:
           gradle-version: 8.12
 
       - name: Build
+        working-directory: smoothdoors
         run: gradle build --no-daemon
 
       - name: Upload jar
         uses: actions/upload-artifact@v4
         with:
           name: smoothdoors-jar
-          path: build/libs/*.jar
+          path: smoothdoors/build/libs/*.jar
