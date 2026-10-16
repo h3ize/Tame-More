@@ -48,7 +48,7 @@ public final class PetHelper {
         return id.map(uuid -> mob.level().getPlayerByUUID(uuid)).orElse(null);
     }
 
-    /** Fox has a real sitting pose; ocelots have none, so they just stand still. */
+    /** Fox has a real sitting pose; ocelots are posed client-side by SittingOcelotModel. */
     public static void applyPoseVisual(Mob mob, boolean sitting) {
         if (mob instanceof Fox fox && fox.isSitting() != sitting) {
             fox.setSitting(sitting);
