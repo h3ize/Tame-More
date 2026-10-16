@@ -9,7 +9,7 @@ import net.minecraft.world.entity.animal.Ocelot;
  * Vanilla ocelot model plus a cat-style sitting pose. The sitting flag comes from
  * Tame More's synced attachment, so it works on the client.
  *
- * The numbers below are the usual cat sit pose; if a limb looks off, nudge them here.
+ * Pose values match the vanilla cat sit.
  */
 public class SittingOcelotModel extends OcelotModel<Ocelot> {
 
@@ -27,37 +27,33 @@ public class SittingOcelotModel extends OcelotModel<Ocelot> {
     }
 
     private void applySitPose() {
-        // Body tilts up so the cat rests on its haunches
+        // Same values the vanilla cat uses for its sitting pose.
         body.xRot = 0.7853982F;
         body.y += -4.0F;
-        body.z += -2.0F;
+        body.z += 5.0F;
 
-        // Tail hangs down behind
-        tail1.xRot = 0.7853982F;
-        tail1.y += -9.0F;
-        tail1.z += 1.0F;
-        tail2.xRot = 1.5707964F;
-        tail2.y += -4.0F;
-        tail2.z += -2.0F;
+        head.y += -3.3F;
+        head.z += 1.0F;
 
-        // Head up, looking forward
-        head.y += -2.0F;
-        head.z += -1.0F;
+        tail1.y += 8.0F;
+        tail1.z += -2.0F;
+        tail1.xRot = 1.7278761F;
+        tail2.y += 2.0F;
+        tail2.z += -0.8F;
+        tail2.xRot = 2.670354F;
 
-        // Front legs straight down
         leftFrontLeg.xRot = -0.15707964F;
-        leftFrontLeg.y += -3.0F;
-        leftFrontLeg.z += 1.0F;
+        leftFrontLeg.y = 16.1F;
+        leftFrontLeg.z = -7.0F;
         rightFrontLeg.xRot = -0.15707964F;
-        rightFrontLeg.y += -3.0F;
-        rightFrontLeg.z += 1.0F;
+        rightFrontLeg.y = 16.1F;
+        rightFrontLeg.z = -7.0F;
 
-        // Back legs folded forward under the body
         leftHindLeg.xRot = -1.5707964F;
-        leftHindLeg.y += 3.0F;
-        leftHindLeg.z += -4.0F;
+        leftHindLeg.y = 21.0F;
+        leftHindLeg.z = 1.0F;
         rightHindLeg.xRot = -1.5707964F;
-        rightHindLeg.y += 3.0F;
-        rightHindLeg.z += -4.0F;
+        rightHindLeg.y = 21.0F;
+        rightHindLeg.z = 1.0F;
     }
 }
